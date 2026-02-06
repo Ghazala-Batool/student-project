@@ -1,0 +1,20 @@
+<?php
+// Database configuration
+$servername = "localhost";
+$username = "root";  // Default XAMPP username
+$password = "";      // Default XAMPP password is empty
+$database = "roasted_bean_db"; // You need to create this database
+
+// Create connection
+$conn = mysqli_connect($servername, $username, $password, $database);
+
+// Check connection
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+
+// Optional: Set charset to UTF-8
+mysqli_set_charset($conn, "utf8");
+
+echo "Database connected successfully!"; // Remove this line after testing
+?>
